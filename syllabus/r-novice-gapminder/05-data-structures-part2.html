@@ -63,10 +63,13 @@ df</code></pre>
 <p>Each column in the data frame is simply a list element, which is why when you ask for the <code>length</code> of the data frame, it tells you the number of columns. If you actually want the number of rows, you can use the <code>nrow</code> function.</p>
 <p>We can add rows or columns to a data.frame using <code>rbind</code> or <code>cbind</code> (these are the two-dimensional equivalents of the <code>c</code> function):</p>
 <pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">rbind</span>(df, <span class="kw">list</span>(<span class="st">&quot;g&quot;</span>, <span class="dv">11</span>, <span class="dv">42</span>))</code></pre>
+<pre class="output"><code>Warning in `[&lt;-.factor`(`*tmp*`, ri, value = &quot;g&quot;): invalid factor level, NA
+generated
+</code></pre>
 <p>This doesn’t work as expected! What does this error message tell us?</p>
 <p>It sounds like it was trying to generate a factor level. Why? Perhaps our first column (containing characters) is to blame… We can access a column in a <code>data.frame</code> by using the <code>$</code> operator.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(df$id)</code></pre>
-<pre class="output"><code>[1] &quot;character&quot;
+<pre class="output"><code>[1] &quot;factor&quot;
 </code></pre>
 <p>Indeed, R automatically made this first column a factor, not a character vector. We can change this in place by converting the type of this column.</p>
 <pre class="sourceCode r"><code class="sourceCode r">df$id &lt;-<span class="st"> </span><span class="kw">as.character</span>(df$id)
@@ -76,10 +79,10 @@ df</code></pre>
 <p>Okay, now let’s try adding that row again.</p>
 <pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">rbind</span>(df, <span class="kw">list</span>(<span class="st">&quot;g&quot;</span>, <span class="dv">11</span>, <span class="dv">42</span>))
 <span class="kw">tail</span>(df, <span class="dt">n=</span><span class="dv">3</span>)</code></pre>
-<pre class="output"><code>  id  x   y
-6  f  6 219
-7  g 11  42
-8  g 11  42
+<pre class="output"><code>    id  x   y
+6    f  6 219
+7 &lt;NA&gt; 11  42
+8    g 11  42
 </code></pre>
 <p>Note that to add a row, we need to use a list, because each column is a different type! If you want to add multiple rows to a data.frame, you will need to separate the new columns in the list:</p>
 <pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">rbind</span>(df, <span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;m&quot;</span>), <span class="kw">c</span>(<span class="dv">12</span>, <span class="dv">13</span>), <span class="kw">c</span>(<span class="dv">534</span>, -<span class="dv">20</span>)))
@@ -91,42 +94,42 @@ df</code></pre>
 </code></pre>
 <p>You can also row-bind data.frames together:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rbind</span>(df, df)</code></pre>
-<pre class="output"><code>   id  x   y
-1   a  1 214
-2   b  2 215
-3   c  3 216
-4   d  4 217
-5   e  5 218
-6   f  6 219
-7   g 11  42
-8   g 11  42
-9   l 12 534
-10  m 13 -20
-11  a  1 214
-12  b  2 215
-13  c  3 216
-14  d  4 217
-15  e  5 218
-16  f  6 219
-17  g 11  42
-18  g 11  42
-19  l 12 534
-20  m 13 -20
+<pre class="output"><code>     id  x   y
+1     a  1 214
+2     b  2 215
+3     c  3 216
+4     d  4 217
+5     e  5 218
+6     f  6 219
+7  &lt;NA&gt; 11  42
+8     g 11  42
+9     l 12 534
+10    m 13 -20
+11    a  1 214
+12    b  2 215
+13    c  3 216
+14    d  4 217
+15    e  5 218
+16    f  6 219
+17 &lt;NA&gt; 11  42
+18    g 11  42
+19    l 12 534
+20    m 13 -20
 </code></pre>
 <p>To add a column we can use <code>cbind</code>:</p>
 <pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">cbind</span>(df, <span class="dv">10</span>:<span class="dv">1</span>)
 df</code></pre>
-<pre class="output"><code>   id  x   y 10:1
-1   a  1 214   10
-2   b  2 215    9
-3   c  3 216    8
-4   d  4 217    7
-5   e  5 218    6
-6   f  6 219    5
-7   g 11  42    4
-8   g 11  42    3
-9   l 12 534    2
-10  m 13 -20    1
+<pre class="output"><code>     id  x   y 10:1
+1     a  1 214   10
+2     b  2 215    9
+3     c  3 216    8
+4     d  4 217    7
+5     e  5 218    6
+6     f  6 219    5
+7  &lt;NA&gt; 11  42    4
+8     g 11  42    3
+9     l 12 534    2
+10    m 13 -20    1
 </code></pre>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
@@ -255,11 +258,11 @@ gapminder &lt;-<span class="st"> </span><span class="kw">read.csv</span>(
 </code></pre>
 <p>Can anyone guess what we should expect the type of the continent column to be?</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(gapminder$continent)</code></pre>
-<pre class="output"><code>[1] &quot;character&quot;
+<pre class="output"><code>[1] &quot;integer&quot;
 </code></pre>
 <p>If you were expecting a the answer to be “character”, you would rightly be surprised by the answer. Let’s take a look at the class of this column:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(gapminder$continent)</code></pre>
-<pre class="output"><code>[1] &quot;character&quot;
+<pre class="output"><code>[1] &quot;factor&quot;
 </code></pre>
 <p>One of the default behaviours of R is to treat any text columns as “factors” when reading in data. The reason for this is that text columns often represent categorical data, which need to be factors to be handled appropriately by the statistical modeling functions in R.</p>
 <p>However it’s not obvious behaviour, and something that trips many people up. We can disable this behaviour and read in the data again.</p>

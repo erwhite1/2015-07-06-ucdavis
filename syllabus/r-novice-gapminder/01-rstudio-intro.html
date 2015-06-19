@@ -220,11 +220,11 @@
 <p>If we type <code>ls</code> by itself, R will print out the source code for that function!</p>
 <pre class="sourceCode r"><code class="sourceCode r">ls</code></pre>
 <pre class="output"><code>function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
-    pattern) 
+    pattern, sorted = TRUE) 
 {
     if (!missing(name)) {
-        nameValue &lt;- try(name, silent = TRUE)
-        if (identical(class(nameValue), &quot;try-error&quot;)) {
+        pos &lt;- tryCatch(name, error = function(e) e)
+        if (inherits(pos, &quot;error&quot;)) {
             name &lt;- substitute(name)
             if (!is.character(name)) 
                 name &lt;- deparse(name)
@@ -232,9 +232,8 @@
                 sQuote(name)), domain = NA)
             pos &lt;- name
         }
-        else pos &lt;- nameValue
     }
-    all.names &lt;- .Internal(ls(envir, all.names))
+    all.names &lt;- .Internal(ls(envir, all.names, sorted))
     if (!missing(pattern)) {
         if ((ll &lt;- length(grep(&quot;[&quot;, pattern, fixed = TRUE))) &amp;&amp; 
             ll != length(grep(&quot;]&quot;, pattern, fixed = TRUE))) {
@@ -251,7 +250,7 @@
     }
     else all.names
 }
-&lt;bytecode: 0x7fd893942358&gt;
+&lt;bytecode: 0x7fc47b8e6978&gt;
 &lt;environment: namespace:base&gt;
 </code></pre>
 <p>You can use <code>rm</code> to delete objects you no longer need:</p>

@@ -35,7 +35,7 @@
 <div class="panel-body">
 <ul>
 <li>Write conditional statements with <code>if</code> and <code>else</code>.</li>
-<li>Write and understand <code>while</code> and <code>for</code> loops.</li>
+<li>Write and understand <code>for</code> loops.</li>
 </ul>
 </div>
 </section>
@@ -114,37 +114,7 @@ only the first element will be used
 <p>The <code>any</code> function will return TRUE if at least one TRUE value is found within a vector, otherwise it will return <code>FALSE</code>. This can be used in a similar way to the <code>%in%</code> operator. The function <code>all</code>, as the name suggests, will only return <code>TRUE</code> if all values in the vector are <code>TRUE</code>.</p>
 </blockquote>
 <h3 id="repeating-operations">Repeating operations</h3>
-<p>Sometimes you will find yourself needing to repeat an operation until a certain condition is met. You can do this with a <code>while</code> loop.</p>
-<pre class="sourceCode r"><code class="sourceCode r">while(this condition is true){
-  do a thing
-}</code></pre>
-<p>Let’s try an example, shall we? We’ll try to come up with some simple code that generates random numbers from a uniform distribution (the <code>runif</code> function) between 0 and 1 until it gets one that’s less than 0.1.</p>
-<pre class="sourceCode r"><code class="sourceCode r">while(z &gt;<span class="st"> </span><span class="fl">0.1</span>){
-  z &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>)
-  <span class="kw">print</span>(z)
-}</code></pre>
-<pre class="output"><code>Error: object &#39;z&#39; not found
-</code></pre>
-<p>But wait, that doesn’t work! What’s the problem?</p>
-<p>The problem is that we haven’t defined <code>z</code>, and so the very first time the while loop’s condition is checked (<code>z &gt; 0.1</code>), <code>while</code> just says “Okay, that’s not true so I’m not going to execute this block of code”. The same thing would have happened if we defined <code>z</code> to be anything less than 0.1. Let’s fix it.</p>
-<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="dv">1</span>
-while(z &gt;<span class="st"> </span><span class="fl">0.1</span>){
-  z &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>)
-  <span class="kw">print</span>(z)
-}</code></pre>
-<pre class="output"><code>[1] 0.4269077
-[1] 0.6931021
-[1] 0.08513597
-</code></pre>
-<section class="challenge panel panel-success">
-<div class="panel-heading">
-<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 2</h4>
-</div>
-<div class="panel-body">
-<p>Use a <code>while</code> loop to construct a vector called ‘pet_list’ with the value: ‘cat’, ‘dog’, ‘dog’, ‘dog’, ‘dog’ (N.B. using a loop may not be the most efficient way to do this, but it illustrates the principle!)</p>
-</div>
-</section>
-<p><code>while</code> loops will not always be appropriate. If you want to iterate over a set of values, when the order of iteration is important, and perform the same operation on each, a <code>for</code> loop will do the job. We saw <code>for</code> loops in the shell lessons earlier. This is the most flexible of looping operations, but therefore also the hardest to use correctly. Avoid using <code>for</code> loops unless the order of iteration is important: i.e. the calculation at each iteration depends on the results of previous iterations.</p>
+<p>If you want to iterate over a set of values, when the order of iteration is important, and perform the same operation on each, a <code>for</code> loop will do the job. We saw <code>for</code> loops in the shell lessons earlier. This is the most flexible of looping operations, but therefore also the hardest to use correctly. Avoid using <code>for</code> loops unless the order of iteration is important: i.e. the calculation at each iteration depends on the results of previous iterations.</p>
 <p>The basic structure of a <code>for</code> loop is:</p>
 <pre class="sourceCode r"><code class="sourceCode r">for(iterator in set of values){
   do a thing
@@ -235,9 +205,27 @@ output_vector2</code></pre>
 [12] &quot;2 c&quot; &quot;3 c&quot; &quot;4 c&quot; &quot;5 c&quot; &quot;1 d&quot; &quot;2 d&quot; &quot;3 d&quot; &quot;4 d&quot; &quot;5 d&quot; &quot;1 e&quot; &quot;2 e&quot;
 [23] &quot;3 e&quot; &quot;4 e&quot; &quot;5 e&quot;
 </code></pre>
+<aside class="callout panel panel-info">
+<div class="panel-heading">
+<h4><span class="glyphicon glyphicon-pushpin"></span>Tip: While loops</h4>
+</div>
+<div class="panel-body">
+<p>Sometimes you will find yourself needing to repeat an operation until a certain condition is met. You can do this with a <code>while</code> loop.</p>
+<pre class="sourceCode r"><code class="sourceCode r">while(this condition is true){
+  do a thing
+}</code></pre>
+<p>As an example, here’s a while loop that generates random numbers from a uniform distribution (the <code>runif</code> function) between 0 and 1 until it gets one that’s less than 0.1.</p>
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="dv">1</span>
+while(z &gt;<span class="st"> </span><span class="fl">0.1</span>){
+  z &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>)
+  <span class="kw">print</span>(z)
+}</code></pre>
+<p><code>while</code> loops will not always be appropriate. You have to be particularly careful that you don’t end up in an infinite loop because your condition is never met.</p>
+</div>
+</aside>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 3</h4>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 2</h4>
 </div>
 <div class="panel-body">
 <p>Compare the objects output_vector and output_vector2. Are they the same? If not, why not? How would you change the last block of code to make output_vector2 the same as output_vector?</p>
@@ -245,7 +233,7 @@ output_vector2</code></pre>
 </section>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 4</h4>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 3</h4>
 </div>
 <div class="panel-body">
 <p>Write a script that loops through the <code>gapminder</code> data by continent and prints out whether the mean life expectancy is smaller or larger than 50 years.</p>
@@ -253,7 +241,7 @@ output_vector2</code></pre>
 </section>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 5</h4>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 4</h4>
 </div>
 <div class="panel-body">
 <p>Modify the script from Challenge 4 to also loop over each country. This time print out whether the life expectancy is smaller than 50, between 50 and 70, or greater than 70.</p>
@@ -261,7 +249,7 @@ output_vector2</code></pre>
 </section>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 6 - Advanced</h4>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge 5 - Advanced</h4>
 </div>
 <div class="panel-body">
 <p>Write a script that loops over each country in the <code>gapminder</code> dataset, tests whether the country starts with a ‘B’, and graphs life expectancy against time as a line graph if the mean life expectancy is under 50 years.</p>

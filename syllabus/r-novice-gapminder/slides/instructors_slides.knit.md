@@ -1,2 +1,0 @@
----
-output: slidy_presentation
