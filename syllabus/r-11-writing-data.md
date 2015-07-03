@@ -50,7 +50,7 @@ dev.off()
 
 Open up this document and have a look.
 
-> #### Challenge 1 {.challenge}
+> #### Challenge - Saving Files {.challenge}
 >
 > Rewrite your 'pdf' command to print a second
 > page in the pdf, showing a facet plot (hint: use `facet_grid`)
