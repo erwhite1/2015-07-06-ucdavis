@@ -3,6 +3,8 @@ layout: page
 title: Syllabus and reference files for Software Carpentry
 ---
 
+[<-- Back to the home page](https://dib-lab.github.io/2015-07-06-ucdavis/)
+
 Here you will find data files, reference sheets, and teaching notes for the workshop.  We may not cover all of this material or do so in the order provided, but you will have the material as a reference after the workshop.
 
 Remember that additional notes, links, etc. will be found on [the Etherpad](https://etherpad.mozilla.org/2015-07-06-ucdavis).
