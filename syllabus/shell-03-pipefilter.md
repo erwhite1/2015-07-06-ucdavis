@@ -368,7 +368,7 @@ the '\*' matches any number of characters;
 the expression `[AB]` matches either an 'A' or a 'B',
 so this matches all the valid data files she has.
 
-> ## What does `sort -n` do? {.challenge}
+> #### Challenge - What does `sort -n` do? {.challenge}
 >
 > If we run `sort` on this file:
 > 
@@ -402,7 +402,7 @@ so this matches all the valid data files she has.
 > 
 > Explain why `-n` has this effect.
 
-> ## What does `<` mean? {.challenge}
+> #### Challenge - What does `<` mean? {.challenge}
 >
 > What is the difference between:
 > 
@@ -416,7 +416,7 @@ so this matches all the valid data files she has.
 > wc -l mydata.dat
 > ~~~
 
-> ## What does `>>` mean? {.challenge}
+> #### Challenge - What does `>>` mean? {.challenge}
 >
 > What is the difference between:
 >
@@ -432,7 +432,7 @@ so this matches all the valid data files she has.
 >
 > Hint: Try executing each command twice in a row and then examining the output files.
 
-> ## Piping commands together {.challenge}
+> #### Challenge - Piping commands together {.challenge}
 >
 > In our current directory, we want to find the 3 files which have the least number of 
 > lines. Which command listed below would work?
@@ -442,7 +442,7 @@ so this matches all the valid data files she has.
 > 3. `wc -l * | head -3 | sort -n`
 > 4. `wc -l * | sort -n | head -3`
 
-> ## Why does `uniq` only remove adjacent duplicates? {.challenge}
+> #### Challenge - Why does `uniq` only remove adjacent duplicates? {.challenge}
 >
 > The command `uniq` removes adjacent duplicated lines from its input.
 > For example, if a file `salmon.txt` contains:
@@ -469,7 +469,7 @@ so this matches all the valid data files she has.
 > (Hint: think about very large data sets.) What other command could
 > you combine with it in a pipe to remove all duplicated lines?
 
-> ## Pipe reading comprehension {.challenge}
+> #### Challenge - Pipe reading comprehension {.challenge}
 >
 > A file called `animals.txt` contains the following data:
 > 
@@ -490,7 +490,7 @@ so this matches all the valid data files she has.
 > cat animals.txt | head -5 | tail -3 | sort -r > final.txt
 > ~~~
 
-> ## Pipe construction {.challenge}
+> #### Challenge - Pipe construction {.challenge}
 >
 > The command:
 > 

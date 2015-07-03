@@ -394,7 +394,7 @@ so she decides to get some coffee and catch up on her reading.
 > then she can re-run `goostats` on `NENE01729B.txt` simply by typing
 > `!458`.
 
-> ## Variables in Loops {.challenge}
+> #### Challenge - Variables in Loops {.challenge}
 > 
 > Suppose that `ls` initially displays:
 > 
@@ -422,7 +422,7 @@ so she decides to get some coffee and catch up on her reading.
 >
 > Why do these two loops give you different outputs?
 
-> ## Saving to a File in a Loop - Part One {.challenge}
+> #### Challenge - Saving to a File in a Loop - Part One {.challenge}
 >
 > In the same directory, what is the effect of this loop?
 > 
@@ -441,7 +441,7 @@ so she decides to get some coffee and catch up on her reading.
 >     `xylose.dat`, and the text from `sucrose.dat` will be saved to a file called `xylose.dat`.
 > 4.  None of the above.
 
-> ## Saving to a File in a Loop - Part Two {.challenge}
+> #### Challenge - Saving to a File in a Loop - Part Two {.challenge}
 >
 > In another directory, where `ls` returns:
 >
@@ -466,7 +466,7 @@ so she decides to get some coffee and catch up on her reading.
 > 4.  All of the text from `fructose.dat`, `glucose.dat` and `sucrose.dat` would be printed
 >     to the screen and saved to a file called `sugar.dat`
 
-> ## Doing a Dry Run {.challenge}
+> #### Challenge - Doing a Dry Run {.challenge}
 >
 > Suppose we want to preview the commands the following loop will execute
 > without actually running those commands:
@@ -497,7 +497,7 @@ so she decides to get some coffee and catch up on her reading.
 > done
 > ~~~
 
-> ## Nested Loops and Command-Line Expressions {.challenge}
+> #### Challenge - Nested Loops and Command-Line Expressions {.challenge}
 >
 > The `expr` does simple arithmetic using command-line parameters:
 > 

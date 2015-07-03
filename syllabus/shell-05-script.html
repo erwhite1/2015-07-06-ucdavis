@@ -191,7 +191,7 @@ done</code></pre>
 <p>The advantage is that this always selects the right files: she doesn’t have to remember to exclude the ‘Z’ files. The disadvantage is that it <em>always</em> selects just those files — she can’t run it on all files (including the ‘Z’ files), or on the ‘G’ or ‘H’ files her colleagues in Antarctica are producing, without editing the script. If she wanted to be more adventurous, she could modify her script to check for command-line parameters, and use <code>*[AB].txt</code> if none were provided. Of course, this introduces another tradeoff between flexibility and complexity.</p>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h2><span class="glyphicon glyphicon-pencil"></span>Variables in shell scripts</h2>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge - Variables in shell scripts</h4>
 </div>
 <div class="panel-body">
 <p>In the molecules directory, you have a shell script called <code>script.sh</code> containing the following commands:</p>
@@ -227,7 +227,7 @@ tail $3 $1</code></pre>
 </section>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h2><span class="glyphicon glyphicon-pencil"></span>Find the longest file with a given extension</h2>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge - Find the longest file with a given extension</h4>
 </div>
 <div class="panel-body">
 <p>Write a shell script called <code>longest.sh</code> that takes the name of a directory and a filename extension as its parameters, and prints out the name of the file with the most lines in that directory with that extension. For example:</p>
@@ -237,7 +237,7 @@ tail $3 $1</code></pre>
 </section>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h2><span class="glyphicon glyphicon-pencil"></span>Why record commands in the history before running them?</h2>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge - Why record commands in the history before running them?</h4>
 </div>
 <div class="panel-body">
 <p>If you run the command:</p>
@@ -247,7 +247,7 @@ tail $3 $1</code></pre>
 </section>
 <section class="challenge panel panel-success">
 <div class="panel-heading">
-<h2><span class="glyphicon glyphicon-pencil"></span>Script reading comprehension</h2>
+<h4><span class="glyphicon glyphicon-pencil"></span>Challenge - Script reading comprehension</h4>
 </div>
 <div class="panel-body">
 <p>Joel’s <code>data</code> directory contains three files: <code>fructose.dat</code>, <code>glucose.dat</code>, and <code>sucrose.dat</code>. Explain what a script called <code>example.sh</code> would do when run as <code>bash example.sh *.dat</code> if it contained the following lines:</p>
