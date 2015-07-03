@@ -81,7 +81,7 @@ Version control is better than mailing files back and forth because:
     the version control system automatically notifies users
     whenever there's a conflict between one person's work and another's.
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > On Wikipedia all changes and their authors are tracked. You can go
 > [here](https://en.wikipedia.org/w/index.php?title=Mars&action=history)

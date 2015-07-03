@@ -258,14 +258,14 @@ __Link to 9 simple ways to share your data paper:
 >     no matter where code and data are hosted.
 
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > Find out whether you are allowed to apply an open license to your software.
 > Can you do this unilaterally,
 > or do you need permission from someone in your institution?
 > If so, who?
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > Find out whether you are allowed to host your work openly on a public forge.
 > Can you do this unilaterally,
