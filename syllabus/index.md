@@ -3,9 +3,6 @@ layout: page
 title: Syllabus and reference files for Software Carpentry
 ---
 
-
-## Syllabus and Lesson Materials
-
 Here you will find data files, reference sheets, and teaching notes for the workshop.  We may not cover all of this material or do so in the order provided, but you will have the material as a reference after the workshop.
 
 ### R (Day 1)
@@ -49,10 +46,11 @@ Here you will find data files, reference sheets, and teaching notes for the work
 
 *Download the (same) data for the R lessons here:* [`gapminder-FiveYearData.csv`](./data/gapminder-FiveYearData.csv)
 
-
 1.  [Plotting](r-08-plot-ggplot2.html) 
 2.  [R Markdown](r-14-rmarkdown.html)
 3.  [Capstone exercise](r-15-capstone.html)
 <!-- 7.  [Functions](r-07-functions.html)
 9.  [Vectorisation](09-vectorisation.html)
 10. [Control flow](12-control-flow.html) -->
+
+[**R Reference Sheet**](r-reference.html)
