@@ -354,7 +354,7 @@ Fast-forward
 > *   `git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up.
 
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > Create a repository on GitHub,
 > clone it,

@@ -969,7 +969,7 @@ _A short exercise to show moving back and forth. If I mess up and I notice right
 > *   `git checkout` recovers old versions of files.
 > *   The `.gitignore` file tells Git what files to ignore.
 
-> ### Challenge {.challange}
+> #### Challenge {.challange}
 >
 > Create a new Git repository on your computer called `bio`.
 > Write a three-line biography for yourself in a file called `me.txt`,
@@ -977,7 +977,7 @@ _A short exercise to show moving back and forth. If I mess up and I notice right
 > then modify one line and add a fourth and display the differences
 > between its updated state and its original state.
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > The following sequence of commands creates one Git repository inside another:
 >

@@ -117,23 +117,39 @@ This is interesting, but it's now in a form that's hard to give to ggplot. We ca
 
 ~~~{.r}
 library(tidyr)
+~~~
+
+
+
+~~~{.output}
+Error in library(tidyr): there is no package called 'tidyr'
+
+~~~
+
+
+
+~~~{.r}
 tidy.cors <- cors %>%
   gather(variables, correlation, gdpPercap.lifeExp, gdpPercap.pop, pop.lifeExp)
+~~~
+
+
+
+~~~{.output}
+Error in function_list[[k]](value): could not find function "gather"
+
+~~~
+
+
+
+~~~{.r}
 head(tidy.cors)
 ~~~
 
 
 
 ~~~{.output}
-Source: local data frame [6 x 3]
-
-  year         variables correlation
-1 1952 gdpPercap.lifeExp   0.2780236
-2 1957 gdpPercap.lifeExp   0.3037445
-3 1962 gdpPercap.lifeExp   0.3832211
-4 1967 gdpPercap.lifeExp   0.4801398
-5 1972 gdpPercap.lifeExp   0.4597014
-6 1977 gdpPercap.lifeExp   0.6198638
+Error in head(tidy.cors): object 'tidy.cors' not found
 
 ~~~
 
@@ -146,7 +162,12 @@ ggplot(tidy.cors, aes(x = year, y = correlation, colour = variables)) +
   theme_bw()
 ~~~
 
-<img src="fig/year-cors-1.png" title="plot of chunk year-cors" alt="plot of chunk year-cors" style="display: block; margin: auto;" />
+
+
+~~~{.output}
+Error in ggplot(tidy.cors, aes(x = year, y = correlation, colour = variables)): object 'tidy.cors' not found
+
+~~~
 
 Just a few minutes with R, and we have learned that our data set contains a string and interesting relationship between GDP per capita and life expectancy.
 

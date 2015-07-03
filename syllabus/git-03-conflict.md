@@ -280,12 +280,12 @@ or find a way to divide the work up differently.
 >     Instead, it highlights conflicts so that they can be resolved.
 
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > Repeat the above exercise with the roles swapped, adding an additional line to
 > the file mars.txt so the other partner deals with the merge conflict.
 
-> ### Challenge {.challenge}
+> #### Challenge {.challenge}
 >
 > What does Git do
 > when there is a conflict in an image or some other non-textual file
