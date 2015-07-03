@@ -109,7 +109,7 @@ $ <span class="kw">git</span> init</code></pre>
 origin   https://github.com/vlad/planets.git (fetch)</code></pre>
 <p>The name <code>origin</code> is a local nickname for your remote repository: we could use something else if we wanted to, but <code>origin</code> is by far the most common choice.</p>
 <p>Once the nickname <code>origin</code> is set up, this command will push the changes from our local repository to the repository on GitHub:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> push origin master</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> push -u origin master</code></pre>
 <pre class="output"><code>Counting objects: 9, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
@@ -118,6 +118,7 @@ Total 9 (delta 2), reused 0 (delta 0)
 To https://github.com/vlad/planets
  * [new branch]      master -&gt; master
 Branch master set up to track remote branch master from origin.</code></pre>
+<p>The first time we push, we add the option <code>-u</code> or <code>--set-upstream</code>. This tells git that the master remote branch is our “main branch”, which will be useful later in comparing the status of local and remote repositories.</p>
 <p><strong>Show that the files now exist online</strong></p>
 <blockquote>
 <h5>Proxy</h5>
