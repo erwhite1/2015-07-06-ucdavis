@@ -319,7 +319,7 @@ but it does find the copy in `thesis` that we didn't delete.
 > `/Users/nelle/data`. This only works if it is the first character in the
 > path: `here/there/~/elsewhere` is *not* `/Users/nelle/elsewhere`.
 
-> ## Renaming files {.challenge}
+> #### Challenge - Renaming files {.challenge}
 >
 > Suppose that you created a `.txt` file in your current directory to contain a list of the
 > statistical tests you will need to do to analyze your data, and named it: `statstics.txt`
@@ -332,7 +332,7 @@ but it does find the copy in `thesis` that we didn't delete.
 > 3. `mv statstics.txt .`
 > 4. `cp statstics.txt .`
 
-> ## Moving and Copying {.challenge}
+> ##### Challenge - Moving and Copying {.challenge}
 >
 > What is the output of the closing `ls` command in the sequence shown below?
 >
@@ -352,7 +352,7 @@ but it does find the copy in `thesis` that we didn't delete.
 > 3.   `proteins.dat recombine`
 > 4.   `proteins-saved.dat`
 
-> ## Organizing Directories and Files {.challenge}
+> #### Challenge - Organizing Directories and Files {.challenge}
 >
 > Jamie is working on a project and she sees that her files aren't very well
 > organized:
@@ -373,7 +373,7 @@ but it does find the copy in `thesis` that we didn't delete.
 > fructose.dat    sucrose.dat
 > ~~~
 
-> ## Copy with Multiple Filenames {.challenge}
+> #### Challenge - Copy with Multiple Filenames {.challenge}
 >
 > What does `cp` do when given several filenames and a directory name, as in:
 >
@@ -390,7 +390,7 @@ but it does find the copy in `thesis` that we didn't delete.
 > $ cp intro.txt methods.txt survey.txt
 > ~~~
 
-> ## Listing Recursively and By Time {.challenge}
+> #### Challenge - Listing Recursively and By Time {.challenge}
 >
 > The command `ls -R` lists the contents of directories recursively,
 > i.e., lists their sub-directories, sub-sub-directories, and so on

@@ -429,7 +429,7 @@ North Whitehead wrote in 1911, "Civilization advances by extending the
 number of important operations which we can perform without thinking
 about them."
 
-> ## Using grep {.challenge}
+> #### Challenge - Using grep {.challenge}
 >
 > ~~~
 > The Tao that is seen
@@ -457,7 +457,7 @@ about them."
 > 3. `grep -w "of" haiku.txt`
 > 4. `grep -i "of" haiku.txt`
 
-> ## `find` pipeline reading comprehension {.challenge}
+> #### Challenge - `find` pipeline reading comprehension {.challenge}
 >
 > Write a short explanatory comment for the following shell script:
 >
@@ -465,7 +465,7 @@ about them."
 > find . -name '*.dat' | wc -l | sort -n
 > ~~~
 
-> ## Matching `ose.dat` but not `temp` {}{.challenge}
+> #### Challenge - Matching `ose.dat` but not `temp` {}{.challenge}
 >
 > The `-v` flag to `grep` inverts pattern matching, so that only lines
 > which do *not* match the pattern are printed. Given that, which of
@@ -481,7 +481,7 @@ about them."
 >
 > 4. None of the above.
 
-> ## Little Women {.challenge}
+> #### Challenge - Little Women {.challenge}
 >
 > You and your friend, having just finished reading *Little Women* by
 > Louisa May Alcott, are in an argument.  Of the four sisters in the
