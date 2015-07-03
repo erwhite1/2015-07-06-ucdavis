@@ -163,7 +163,7 @@ this command will push the changes from our local repository
 to the repository on GitHub:
 
 ~~~ {.bash}
-$ git push origin master
+$ git push -u origin master
 ~~~
 
 ~~~ {.output}
@@ -176,6 +176,10 @@ To https://github.com/vlad/planets
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
+
+The first time we push, we add the option `-u` or `--set-upstream`. This 
+tells git that the master remote branch is our "main branch", 
+which will be useful later in comparing the status of local and remote repositories.
 
 __Show that the files now exist online__
 
