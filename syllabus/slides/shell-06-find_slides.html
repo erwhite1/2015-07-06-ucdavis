@@ -32,96 +32,44 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <body>
 <div id="challenge-1" class="slide section level1">
 <h1>Challenge 1</h1>
-<p>Given the following code:</p>
-<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">5.4</span>, <span class="fl">6.2</span>, <span class="fl">7.1</span>, <span class="fl">4.8</span>, <span class="fl">7.5</span>)
-<span class="kw">names</span>(x) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>)
-<span class="kw">print</span>(x)</code></pre>
-<pre class="output"><code>  a   b   c   d   e 
-5.4 6.2 7.1 4.8 7.5 
-</code></pre>
+<pre><code>The Tao that is seen
+Is not the true Tao, until
+You bring fresh toner.
+
+With searching comes loss
+and the presence of absence:
+&quot;My Thesis&quot; not found.
+
+Yesterday it worked
+Today it is not working
+Software is like that.</code></pre>
+<p>From the above text, contained in the file <code>haiku.txt</code>, which command would result in the following output:</p>
+<pre><code>and the presence of absence:</code></pre>
 <ol style="list-style-type: decimal">
-<li>Come up with at least 3 different commands that will produce the following output:</li>
-</ol>
-<pre class="output"><code>  b   c   d 
-6.2 7.1 4.8 
-</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Compare notes with your neighbour. Did you have different strategies?</li>
+<li><code>grep &quot;of&quot; haiku.txt</code></li>
+<li><code>grep -E &quot;of&quot; haiku.txt</code></li>
+<li><code>grep -w &quot;of&quot; haiku.txt</code></li>
+<li><code>grep -i &quot;of&quot; haiku.txt</code></li>
 </ol>
 </div>
 <div id="challenge-2" class="slide section level1">
 <h1>Challenge 2</h1>
-<p>Given the following code:</p>
-<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">5.4</span>, <span class="fl">6.2</span>, <span class="fl">7.1</span>, <span class="fl">4.8</span>, <span class="fl">7.5</span>)
-<span class="kw">names</span>(x) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>)
-<span class="kw">print</span>(x)</code></pre>
-<pre class="output"><code>  a   b   c   d   e 
-5.4 6.2 7.1 4.8 7.5 
-</code></pre>
-<ol style="list-style-type: decimal">
-<li>Write a subsetting command to return the values in x that are greater than 4 and less than 7.</li>
-</ol>
+<p>Write a short explanatory comment for the following shell script:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">find</span> . -name <span class="st">'*.dat'</span> <span class="kw">|</span> <span class="kw">wc</span> -l <span class="kw">|</span> <span class="kw">sort</span> -n</code></pre>
 </div>
 <div id="challenge-3" class="slide section level1">
 <h1>Challenge 3</h1>
-<p>Given the following code:</p>
-<pre class="sourceCode r"><code class="sourceCode r">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">18</span>, <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">6</span>)
-<span class="kw">print</span>(m)</code></pre>
-<pre class="output"><code>     [,1] [,2] [,3] [,4] [,5] [,6]
-[1,]    1    4    7   10   13   16
-[2,]    2    5    8   11   14   17
-[3,]    3    6    9   12   15   18
-</code></pre>
+<p>The <code>-v</code> flag to <code>grep</code> inverts pattern matching, so that only lines which do <em>not</em> match the pattern are printed. Given that, which of the following commands will find all files in <code>/data</code> whose names end in <code>ose.dat</code> (e.g., <code>sucrose.dat</code> or <code>maltose.dat</code>), but do <em>not</em> contain the word <code>temp</code>?</p>
 <ol style="list-style-type: decimal">
-<li>Which of the following commands will extract the values 11 and 14?</li>
+<li><p><code>find /data -name '*.dat' | grep ose | grep -v temp</code></p></li>
+<li><p><code>find /data -name ose.dat | grep -v temp</code></p></li>
+<li><p><code>grep -v &quot;temp&quot; $(find /data -name '*ose.dat')</code></p></li>
+<li><p>None of the above.</p></li>
 </ol>
-<p>A. <code>m[2,4,2,5]</code></p>
-<p>B. <code>m[2:5]</code></p>
-<p>C. <code>m[4:5,2]</code></p>
-<p>D. <code>m[2,c(4,5)]</code></p>
 </div>
 <div id="challenge-4" class="slide section level1">
 <h1>Challenge 4</h1>
-<p>Given the following list:</p>
-<pre class="sourceCode r"><code class="sourceCode r">xlist &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="st">&quot;Software Carpentry&quot;</span>, <span class="dt">b =</span> <span class="dv">1</span>:<span class="dv">10</span>, <span class="dt">data =</span> <span class="kw">head</span>(iris))</code></pre>
-<p>Using your knowledge of both list and vector subsetting, extract the number 2 from xlist. Hint: the number 2 is contained within the “b” item in the list.</p>
-</div>
-<div id="challenge-5" class="slide section level1">
-<h1>Challenge 5</h1>
-<p>Given a linear model:</p>
-<pre class="sourceCode r"><code class="sourceCode r">mod &lt;-<span class="st"> </span><span class="kw">aov</span>(pop ~<span class="st"> </span>lifeExp, <span class="dt">data=</span>gapminder)</code></pre>
-<p>Extract the residual degrees of freedom (hint: <code>attributes()</code> will help you)</p>
-</div>
-<div id="challenge-6" class="slide section level1">
-<h1>Challenge 6</h1>
-<p>Fix each of the following common data frame subsetting errors:</p>
-<ol style="list-style-type: decimal">
-<li>Extract observations collected for the year 1957</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">gapminder[gapminder$year =<span class="st"> </span><span class="dv">1957</span>,]</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Extract all columns except 1 through to 4</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">gapminder[,-<span class="dv">1</span>:<span class="dv">4</span>]</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Extract the rows where the life expectancy is longer the 80 years</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">gapminder[gapminder$lifeExp &gt;<span class="st"> </span><span class="dv">80</span>]</code></pre>
-<ol start="4" style="list-style-type: decimal">
-<li>Extract the first row, and the fourth and fifth columns (<code>lifeExp</code> and <code>gdpPercap</code>).</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">gapminder[<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li>Advanced: extract rows that contain information for the years 2002 and 2007</li>
-</ol>
-<pre class="sourceCode r"><code class="sourceCode r">gapminder[gapminder$year ==<span class="st"> </span><span class="dv">2002</span> |<span class="st"> </span><span class="dv">2007</span>,]</code></pre>
-</div>
-<div id="challenge-7" class="slide section level1">
-<h1>Challenge 7</h1>
-<ol style="list-style-type: decimal">
-<li><p>Why does <code>gapminder[1:20]</code> return an error? How does it differ from <code>gapminder[1:20, ]</code>?</p></li>
-<li><p>Create a new <code>data.frame</code> called <code>gapminder_small</code> that only contains rows 1 through 9 and 19 through 23. You can do this in one or two steps.</p></li>
-</ol>
+<p>You and your friend, having just finished reading <em>Little Women</em> by Louisa May Alcott, are in an argument. Of the four sisters in the book, Jo, Meg, Beth, and Amy, your friend thinks that Jo was the most mentioned. You, however, are certain it was Amy. Luckily, you have a file <code>LittleWomen.txt</code> containing the full text of the novel. Using a<code>for</code> loop, how would you tabulate the number of times each of the four sisters is mentioned? Hint: one solution might employ the commands <code>grep</code> and <code>wc</code> and a <code>|</code>, while another might utilize <code>grep</code> options.</p>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->

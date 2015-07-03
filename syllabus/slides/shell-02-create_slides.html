@@ -13,11 +13,39 @@
 <body>
 <div id="challenge-1" class="slide section level1">
 <h1>Challenge 1</h1>
-<p>Calculate the average life expectancy per continent. Which has the longest? Which had the shortest?</p>
+<p>Suppose that you created a <code>.txt</code> file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: <code>statstics.txt</code></p>
+<p>After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?</p>
+<ol style="list-style-type: decimal">
+<li><code>cp statstics.txt statistics.txt</code></li>
+<li><code>mv statstics.txt statistics.txt</code></li>
+<li><code>mv statstics.txt .</code></li>
+<li><code>cp statstics.txt .</code></li>
+</ol>
 </div>
 <div id="challenge-2" class="slide section level1">
 <h1>Challenge 2</h1>
-<p>Calculate the average life expectancy per continent and year. Which had the longest and shortest in 2007? Which had the greatest change in between 1952 and 2007?</p>
+<p>Jamie is working on a project and she sees that her files aren’t very well organized:</p>
+<pre><code>$ ls -F
+analyzed/  fructose.dat    raw/   sucrose.dat</code></pre>
+<p>The <code>fructose.dat</code> and <code>sucrose.dat</code> files contain output from her data analysis. What command(s) covered in this lesson does she need to run so that the commands below will produce the output shown?</p>
+<pre><code>$ ls -F
+analyzed/   raw/
+$ ls analyzed
+fructose.dat    sucrose.dat</code></pre>
+</div>
+<div id="challenge-3" class="slide section level1">
+<h1>Challenge 3</h1>
+<p>What does <code>cp</code> do when given several filenames and a directory name, as in:</p>
+<pre><code>$ mkdir backup
+$ cp thesis/citations.txt thesis/quotations.txt backup</code></pre>
+<p>What does <code>cp</code> do when given three or more filenames, as in:</p>
+<pre><code>$ ls -F
+intro.txt    methods.txt    survey.txt
+$ cp intro.txt methods.txt survey.txt</code></pre>
+</div>
+<div id="challenge-4" class="slide section level1">
+<h1>Challenge 4</h1>
+<p>The command <code>ls -R</code> lists the contents of directories recursively, i.e., lists their sub-directories, sub-sub-directories, and so on in alphabetical order at each level. The command <code>ls -t</code> lists things by time of last change, with most recently changed files or directories first. In what order does <code>ls -R -t</code> display things?</p>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
