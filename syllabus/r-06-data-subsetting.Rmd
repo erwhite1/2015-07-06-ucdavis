@@ -7,7 +7,7 @@ output: html_document
 
 ```{r, include = FALSE}
 source("chunk_options.R")
-gapminder <- read.csv("data/gapminder.csv")
+gapminder <- read.csv("data/gapminder-FiveYearData.csv")
 ```
 
 *Much of this lesson was copied or adapted from Jeff Hollister's [materials](http://usepa.github.io/introR/2015/01/14/03-Clean/)*
@@ -18,6 +18,7 @@ gapminder <- read.csv("data/gapminder.csv")
 > * Learn how to use key `dplyr` verbs to summarize data: `select()`,
 >   `filter()`, `mutate()`, `group_by()`, and `summarize()`.
 > * Create analysis pipelines with `%>%`
+> * Write data using the `write.table` command
 
 ## Bracket Subsetting
 
@@ -249,4 +250,80 @@ gapminder %>%
 > 1982. Return a data frame with the columns `country`, `year`, and `pop`.
 
 [Handy dplyr cheatsheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+### Writing data
+
+At some point, you'll also want to write out data from R.
+
+We can use the `write.table` function for this, which is
+very similar to `read.table` from before.
+
+Let's create a data-cleaning script, for this analysis, we
+only want to focus on the gapminder data for Australia:
+
+```{r}
+aust_subset <- filter(gapminder, country == "Australia")
+
+write.table(aust_subset,
+  file="gapminder-aus.csv",
+  sep=","
+)
+```
+
+Let's take a look at the data to make sure it looks
+OK:
+
+```{r}
+head(read.table('gapminder-aus.csv',header=T))
+```
+
+Hmm, that's not quite what we wanted. Where did all these
+quotation marks come from? Also the row numbers are
+meaningless.
+
+Let's look at the help file to work out how to change this
+behaviour.
+
+```{r, eval=FALSE}
+?write.table
+```
+
+By default R will wrap character vectors with quotation marks
+when writing out to file. It will also write out the row and
+column names.
+
+Let's fix this:
+
+```{r}
+write.table(
+  gapminder[gapminder$country == "Australia",],
+  file="gapminder-aus.csv",
+  sep=",", quote=FALSE, row.names=FALSE
+)
+```
+
+Now lets look at the data again:
+
+```{r}
+head(read.table('gapminder-aus.csv',header=T))
+```
+
+That looks better!
+
+> #### Challenge 2 {.challenge}
+>
+> Write a data-cleaning script file that subsets the gapminder
+> data to include only data points collected since 1990.
+>
+> Use this script to write out the new subset to a file
+> in the `cleaned-data/` directory.
+>
+
+```{r, echo=FALSE}
+# We remove after rendering the lesson, because we don't want this in the lesson
+# repository
+unlink("cleaned-data", recursive=TRUE)
+```
+
+
 
