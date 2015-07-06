@@ -1,6 +1,34 @@
 
 # Version control
 
+#Teaching Git - 1
+
+1. Take 30 seconds and explain to your neighbor what your project workflow is. What tools do you use? How do you keep notes on what you did?
+2. Does your workflow change when you collaborate with other people? How do you communicate?
+
+---
+
+#What is Version Control?
+
+* How easy would it be to grab the code you used to develop a project/manuscript from last week? Last year? Last 5 years?
+* How much work would you lose if your laptop was stolen/damaged?
+* If you deleted part of your manuscript or analysis, then later realized that you wanted to keep it in, would you have to rewrite it?
+* If you were collaborating with someone on a manuscript or some code and someone rewrote something, how easy would it be to track down who changed it and why?
+
+---
+
+__Version control...__
+
+* keeps track of changes to a file/folder
+* keeps a backup of changing files
+* stores of history of the changes
+* allows you to go back to previous versions of your project
+* allows you to work efficiently from multiple computers in multiple locations
+* allows many people to make changes concurrently (collaboration!)
+
+---
+
+__Do you currently use some kind of version control?
 ## What is your day-to-day workflow?
 - What is the shell?
 - How do you access it?
