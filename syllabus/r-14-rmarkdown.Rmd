@@ -216,7 +216,7 @@ The main code chunks look like this:
 
 <pre>
 &#96;&#96;&#96;{r load_data}
-gapminder <- read.csv("~/Desktop/gapminder.csv")
+gapminder <- read.csv("~/Desktop/gapminder-FiveYearData.csv")
 &#96;&#96;&#96;
 </pre>
 
