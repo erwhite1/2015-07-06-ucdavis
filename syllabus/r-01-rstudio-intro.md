@@ -522,7 +522,7 @@ function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE,
     }
     else all.names
 }
-<bytecode: 0x7fa7327b3110>
+<bytecode: 0x7f94393f5f78>
 <environment: namespace:base>
 
 ~~~
@@ -576,7 +576,9 @@ Error in rm(list <- ls()): ... must contain names or character strings
 >
 
 
-> #### Challenge 1 {.challenge}
+> #### Challenge {.challenge}
+>
+> 1.
 >
 > Draw diagrams showing what variables refer to what values after each
 > statement in the following program:
@@ -589,14 +591,12 @@ Error in rm(list <- ls()): ... must contain names or character strings
 > age <- age - 20
 > ~~~
 >
-
-> #### Challenge 2 {.challenge}
+> 2.
 >
 > Run the code from the previous challenge, and write a command to
 > compare mass to age. Is mass larger than age?
 >
-
-> #### Challenge 3 {.challenge}
+> 3. 
 >
 > Clean up your working environment by deleting the mass and age
 > variables.
