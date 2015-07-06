@@ -24,15 +24,12 @@ Remember that additional notes, links, etc. will be found on [the Etherpad](http
 
 ### The UNIX Shell
 
-*Download the data for the shell lesson here:* [`shell-novice.data.zip`](./data/shell-novice-data.zip)
+* 
+*Download the data for the shell lesson here:* [`shell-genomics.zip`](./data/shell-genomics.zip)
 
-1.  [Introducing the Shell](shell-00-intro.html)
-2.  [Files and Directories](shell-01-filedir.html)
-3.  [Creating Things](shell-02-create.html)
-4.  [Pipes and Filters](shell-03-pipefilter.html)
-5.  [Loops](shell-04-loop.html)
-6.  [Shell Scripts](shell-05-script.html)
-7.  [Finding Things](shell-06-find.html)
+1. [Introducing the shell for automation](https://github.com/datacarpentry/shell-genomics/)  
+[Slides](http://datacarpentry.github.io/shell-genomics/slides.html)
+
 
 [**Shell Reference Sheet**](shell-reference.html)
 
