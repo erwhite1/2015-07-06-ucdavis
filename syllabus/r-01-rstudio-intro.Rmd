@@ -1,8 +1,9 @@
 ---
-layout: page
-title: R for reproducible scientific analysis
-subtitle: Introduction to R and RStudio
+title: "R for reproducible scientific analysis"
 minutes: 45
+output: pdf_document
+subtitle: Introduction to R and RStudio
+layout: page
 ---
 
 ```{r, include=FALSE}
