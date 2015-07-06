@@ -338,31 +338,31 @@ output_vector2
 > that you don't end up in an infinite loop because your condition is never met.
 >
 
-> #### Challenge 2 {.challenge}
+> #### Challenges 2-5 {.challenge}
+>
+> 2.
 >
 > Compare the objects output_vector and
 > output_vector2. Are they the same? If not, why not?
 > How would you change the last block of code to make output_vector2
 > the same as output_vector?
 >
-
-> #### Challenge 3 {.challenge}
+> 3. 
 >
 > Write a script that loops through the `gapminder` data by continent and prints out
 > whether the mean life expectancy is smaller or larger than 50
 > years.
 >
-
-> #### Challenge 4 {.challenge}
+>
+> 4.
 >
 > Modify the script from Challenge 4 to also loop over each
 > country. This time print out whether the life expectancy is
 > smaller than 50, between 50 and 70, or greater than 70.
 >
-
-> #### Challenge 5 - Advanced {.challenge}
+>
+> 5.
 >
 > Write a script that loops over each country in the `gapminder` dataset,
 > tests whether the country starts with a 'B', and graphs life expectancy
 > against time as a line graph if the mean life expectancy is under 50 years.
->

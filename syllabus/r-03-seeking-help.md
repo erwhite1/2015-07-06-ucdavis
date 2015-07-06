@@ -124,7 +124,7 @@ other attached packages:
 [1] knitr_1.10.5
 
 loaded via a namespace (and not attached):
-[1] magrittr_1.5  formatR_1.2   tools_3.2.0   stringi_0.4-1 stringr_1.0.0
+[1] magrittr_1.5  formatR_1.2   tools_3.2.0   stringi_0.5-5 stringr_1.0.0
 [6] evaluate_0.7 
 
 ~~~
